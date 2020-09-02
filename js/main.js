@@ -47,3 +47,60 @@ let double = number => { return number * 2; };
 
 let doubleNumber = 10;
 console.log(doubleNumber + ' doubled: ' + double(doubleNumber));
+
+var colors = ['red', 'green', 'blue'];
+
+console.log('Colors logged using for loop:')
+for (let i = 0; i < colors.length; i++) {
+    console.log(colors[i]);
+}
+
+console.log('Colors logged using forEach:')
+colors.forEach(x => console.log(x));
+
+function rotateArray(arr){
+    for (let i = 0; i < arr.length; i++) {
+        arr.unshift(arr.pop());
+    }
+}
+
+var testNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 50, 100, 200];
+
+rotateArray(testNumbers);
+
+console.log('Array rotated: ' + testNumbers);
+
+function reduceArray(array = []){
+    return array.reduce((total, num) => {
+        if(num > 50) {
+            return total += num;
+        }
+        return total;
+    }, 0);
+}
+
+console.log(reduceArray(testNumbers));
+
+function makeArray(number = 0){
+    let retArray = [];
+    let doubled = number * 2;
+    for (let i = 0; i <= doubled; i++) {
+        retArray.push(i <= number ? i : doubled - i);
+    }
+    return retArray;
+}
+
+console.log('New array: ' + makeArray(20));
+
+function zooInventory(zoo = []){
+    return zoo.map(x => [x[0], x[1].join(' is ')].join(' the '));
+}
+
+var myZoo = [
+    ["King Kong", ["gorilla", 42]],
+    ["Nemo", ["fish", 5]],
+    ["Punxsutawney Phil", ["groundhog", 11]]
+  ];
+
+  newZoo = zooInventory(myZoo);
+  console.log(newZoo);
