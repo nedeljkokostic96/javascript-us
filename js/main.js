@@ -129,4 +129,19 @@ console.log(JSON.stringify(jsArray));
 
 JSON.parse(jsonArray).forEach(x => console.log(x)); //looping over json array
 
+const testNum = 2;
 
+checkIfEven = num => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            num % 2 == 0 ? resolve(num) : reject(num);
+        },1000);
+    });
+};
+
+checkIfEven(testNum).then((addition) => {
+    console.log('Success');
+    return checkIfEven(addition + 1);
+}).catch((e) => {
+    console.error('Error');
+});
