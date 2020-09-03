@@ -48,7 +48,7 @@ let double = number => { return number * 2; };
 let doubleNumber = 10;
 console.log(doubleNumber + ' doubled: ' + double(doubleNumber));
 
-var colors = ['red', 'green', 'blue'];
+let colors = ['red', 'green', 'blue'];
 
 console.log('Colors logged using for loop:')
 for (let i = 0; i < colors.length; i++) {
@@ -64,7 +64,7 @@ function rotateArray(arr){
     }
 }
 
-var testNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 50, 100, 200];
+let testNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 50, 100, 200];
 
 rotateArray(testNumbers);
 
@@ -96,7 +96,7 @@ function zooInventory(zoo = []){
     return zoo.map(x => [x[0], x[1].join(' is ')].join(' the '));
 }
 
-var myZoo = [
+let myZoo = [
     ["King Kong", ["gorilla", 42]],
     ["Nemo", ["fish", 5]],
     ["Punxsutawney Phil", ["groundhog", 11]]
@@ -105,13 +105,13 @@ var myZoo = [
   newZoo = zooInventory(myZoo);
   console.log(newZoo);
 
-  var jsObject = {
+let jsObject = {
     firstName : "Nedeljko",
     lastName : "Kostic",
     age : 23
 };
 
-var jsonObject = '{'+
+let jsonObject = '{'+
                     '"firstName" : "Nedeljko",' +
                     '"lastName" : "Kostic", ' +
                     '"age" : 23' +
@@ -120,9 +120,9 @@ var jsonObject = '{'+
 console.log(JSON.parse(jsonObject));
 console.log(JSON.stringify(jsObject));
 
-var jsArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let jsArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-var jsonArray = '[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]';
+let jsonArray = '[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]';
 
 console.log(JSON.parse(jsonArray));
 console.log(JSON.stringify(jsArray));
