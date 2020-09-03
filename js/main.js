@@ -105,4 +105,28 @@ var myZoo = [
   newZoo = zooInventory(myZoo);
   console.log(newZoo);
 
+  var jsObject = {
+    firstName : "Nedeljko",
+    lastName : "Kostic",
+    age : 23
+};
+
+var jsonObject = '{'+
+                    '"firstName" : "Nedeljko",' +
+                    '"lastName" : "Kostic", ' +
+                    '"age" : 23' +
+                '}';
+
+console.log(JSON.parse(jsonObject));
+console.log(JSON.stringify(jsObject));
+
+var jsArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+var jsonArray = '[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]';
+
+console.log(JSON.parse(jsonArray));
+console.log(JSON.stringify(jsArray));
+
+JSON.parse(jsonArray).forEach(x => console.log(x)); //looping over json array
+
 
