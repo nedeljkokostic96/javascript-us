@@ -129,19 +129,16 @@ console.log(JSON.stringify(jsArray));
 
 JSON.parse(jsonArray).forEach(x => console.log(x)); //looping over json array
 
-const testNum = 2;
-
 checkIfEven = num => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            num % 2 == 0 ? resolve(num) : reject(num);
+            num % 2 == 0 ? resolve('Success') : reject('Error');
         },1000);
     });
 };
 
-checkIfEven(testNum).then((addition) => {
-    console.log('Success');
-    return checkIfEven(addition + 1);
+checkIfEven(2).then((addition) => {
+    console.log(addition);
 }).catch((e) => {
-    console.error('Error');
+    console.error(e);
 });
